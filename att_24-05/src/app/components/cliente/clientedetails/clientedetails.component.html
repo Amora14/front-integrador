@@ -1,0 +1,63 @@
+<div class="container">
+    <section class="text-center">
+        <div class="card">
+            <div class="card-body py-5 px-md-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="fw-bold mb-5">Cadastro de cliente</h2>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <input type="text" id="nome" class="form-control" placeholder="Nome" [(ngModel)]="cliente.nome" name="nome"/>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <input type="text" class="form-control" placeholder="Telefone" [(ngModel)]="cliente.telefone" name="telefone"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <input type="text" class="form-control" placeholder="CPF" [(ngModel)]="cliente.cpf" name="cpf"/>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <input type="text" class="form-control" placeholder="RG" [(ngModel)]="cliente.rg" name="rg"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <input type="text" class="form-control" placeholder="Email" [(ngModel)]="cliente.email" name="email"/>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <input type="date" class="form-control" placeholder="Data de nascimento" [(ngModel)]="cliente.nascimento" name="nascimento"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <input type="text" class="form-control" placeholder="Profissão" [(ngModel)]="cliente.profissao" name="profissao"/>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <input type="date" class="form-control" placeholder="Data de entrada" [(ngModel)]="cliente.entrada" name="entrada"/>
+                                </div>
+                            </div>
+                            <div class="form-outline" data-mdb-input-init>
+                                <label class="form-label" for="seletor">Apartamento</label>
+                                <select name="seletor" class="form-control" [(ngModel)]="cliente.ap.aparnum">
+                                    <option value="{{0}}">Selecione</option>
+                                    @for (ap of lista; track $index) {
+                                    @if (ap.status == 'Livre') {
+                                    <option value="{{ap.aparnum}}">{{ap.aparnum}}</option>
+                                    }
+                                }
+                                </select>
+                            </div>
+                            <br>
+                            <button [disabled]="cliente.ap.aparnum == 0 || cliente.nome == null" type="submit" class="btn btn-primary btn-block mb-4" (click)="save()">Cadastrar</button>
+                            
+                            <div class="text-center">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

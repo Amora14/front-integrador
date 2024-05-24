@@ -1,0 +1,59 @@
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.btn {
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.form-check-input {
+    margin-right: 10px;
+}
+
+.btn-floating {
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-floating i {
+    line-height: 40px;
+}
+
+.btn-floating:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.text-center {
+    margin-top: 20px;
+}

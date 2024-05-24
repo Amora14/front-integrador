@@ -1,0 +1,42 @@
+<div class="container container2">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Listagem de clientes</h3>
+                    <br>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Apartamento</th>
+                                <th>Valor alguel</th>
+                                <th>Data de entrada</th>
+                                <div class="direita">
+                                    <button type="button" class="btn btn-info" data-mdb-ripple-init routerLink="/admin/cliente/new">Novo</button>
+                                    </div>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        @for (cliente of lista; track $index) {
+                        
+                            <tr>
+                                <td>{{cliente.nome}}</td>
+                                <td class="tdstatus"><p class="status">{{cliente.ap.aparnum}}</p></td>
+                                <td>xxx</td>
+                                <td>data</td>
+                                <td class="direita">
+                                    <button type="button" class="btn btn-info" [routerLink]="['/admin/cliente/', cliente.id]">Informações</button>
+                                    <button type="button" class="btn btn-danger" data-mdb-ripple-init (click)="deletar(cliente)">Deletar</button>
+                                </td>
+                            </tr>
+                        }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

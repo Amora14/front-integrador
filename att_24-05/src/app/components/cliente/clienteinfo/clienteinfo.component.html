@@ -1,0 +1,59 @@
+<div class="container">
+    <section class="text-center">
+        <div class="card">
+            <div class="card-body py-5 px-md-5">
+                <h2 class="fw-bold mb-5">Informações do Cliente</h2>
+                <div class="DivId">
+                    <label><strong>Id:</strong></label>
+                    <div class="info-value StrongId">{{cliente.id}}</div>
+                </div>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="info-block">
+                                    <label><strong>Nome:</strong></label>
+                                    <div class="info-value">{{cliente.nome}}</div>
+                                </div>
+                                <div class="info-block">
+                                    <label><strong>Telefone:</strong></label>
+                                    <div class="info-value">{{cliente.telefone}}</div>
+                                </div>
+                                <div class="info-block">
+                                    <label><strong>CPF:</strong></label>
+                                    <div class="info-value">{{cliente.cpf}}</div>
+                                </div>
+                                <div class="info-block">
+                                    <label><strong>RG:</strong></label>
+                                    <div class="info-value">{{cliente.rg}}</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="info-block">
+                                    <label><strong>Email:</strong></label>
+                                    <div class="info-value">{{cliente.email}}</div>
+                                </div>
+                                <div class="info-block">
+                                    <label><strong>Data de Nascimento:</strong></label>
+                                    <div class="info-value">{{cliente.nascimento}}</div>
+                                </div>
+                                <div class="info-block">
+                                    <label><strong>Data de entrada:</strong></label>
+                                    <div class="info-value">{{cliente.entrada}}</div>
+                                </div>
+                                <div class="info-block">
+                                    <label><strong>Profissão:</strong></label>
+                                    <div class="info-value">{{cliente.profissao}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary" routerLink="/admin/cliente">Voltar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

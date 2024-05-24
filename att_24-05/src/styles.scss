@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+.centralizar{
+    text-align: center;
+}
+
+.direita{
+    text-align: right;
+}
+
+body{
+    background-color: rgb(37, 117, 252) !important;
+}
+
+.container{
+    padding: 20px;
+    margin-left: 180px;
+    max-width: calc(100% - 180px) !important;
+}
+
+.form-control{
+    border: 1px solid black !important;
+}
+
+.swal2-popup {
+    background-color: #363030 !important;
+    color: #fffefe;
+    border: 2px solid white;
+  }
+  
+  

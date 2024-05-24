@@ -1,0 +1,32 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <div class="mb-md-5 mt-md-4 pb-5">
+
+                            <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                            <p class="text-white-50 mb-5">Entre com seu usuário e senha</p>
+
+                            <div data-mdb-input-init class="form-outline form-white mb-4">
+                                <input type="text" class="form-control form-control-lg custom-placeholder" placeholder="Usuário" for="usuario" [(ngModel)]="usuario"/>
+                            </div>
+
+                            <div data-mdb-input-init class="form-outline form-white mb-4">
+                                <input type="password" class="form-control form-control-lg custom-placeholder" for="senha" placeholder="Senha" [(ngModel)]="senha"/>
+                            </div>
+
+                            <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Realize seu login!</a></p>
+
+                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-primary px-5 py-3" type="submit" (click)="logar()">Acessar</button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

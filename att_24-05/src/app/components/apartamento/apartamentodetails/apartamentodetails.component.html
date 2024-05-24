@@ -1,0 +1,23 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4"></div>
+
+        <div class="col-lg-4 centralizar topo">
+
+            <div class="card">
+                <div class="card-body">
+                    <h3>Cadastro de Apartamento</h3>
+                    <div class="form-outline" data-mdb-input-init>
+                        <input type="text" id="usuario" class="form-control" [(ngModel)]="apartamento.aparnum"/>
+                        <label class="form-label" for="usuario">Numero</label>
+                    </div>
+                    <br>
+                    <button [disabled]="apartamento.aparnum == 0 || apartamento.aparnum == null" type="button" class="btn btn-info" data-mdb-ripple-init (click)="save()">Salvar</button>
+                </div>
+                </div>
+              </div>
+
+        <div class="col-lg-4"></div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Listagem de apartamentos</h3>
+                    <br>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Número</th>
+                                <th>Status</th>
+                                <div class="direita">
+                                    <button type="button" class="btn btn-info" data-mdb-ripple-init routerLink="/admin/apartamento/new">Novo</button>
+                                    </div>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        @for (apartamento of lista; track $index) {
+                        
+                            <tr>
+                                <td>{{apartamento.aparnum}}</td>
+                                @if (apartamento.status == 'Livre') {
+                                <td class="tdstatus"><p class="statusL">{{apartamento.status}}</p></td>
+                                }@else{
+                                    <td class="tdstatus"><p class="statusO">{{apartamento.status}}</p></td>
+                                }
+                                <td class="direita">
+                                <!--<button type="button" class="btn btn-info" data-mdb-ripple-init routerLink="/admin/apartamento/edit/{{apartamento.aparnum}}">Editar</button> -->
+                                    <button type="button" class="btn btn-danger" data-mdb-ripple-init (click)="deletar(apartamento)">Deletar</button>
+                                </td>
+                            </tr>
+                        }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
